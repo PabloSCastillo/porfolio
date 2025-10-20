@@ -5,10 +5,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <span>
-        All images taken from{" "}
-        <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">
-          Unsplash
-        </a>
+        Copyright & Company Info: © 2025 <small>Paul S Castle</small>. All rights reserved.
       </span>
     </footer>
   );

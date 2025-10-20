@@ -2,8 +2,10 @@ import React from "react";
 
 const Home: React.FC = () => {
   return <>
-  <h1>Home</h1>
+    <div className=" min-h-lvh">
+      <h1 className="grid grid-cols-1 text-center italic text-2xl p-6">Home</h1>
+    </div>
   </>;
 };
-
+ 
 export default Home;

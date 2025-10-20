@@ -12,9 +12,6 @@ import Contact from "./pages/Contact";
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
-  const lorem =
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium ullam animi, necessitatibus earum, dolorum, officiis architecto sunt perferendis tempore nam ab vel aliquam! Possimus voluptates commodi debitis magnam officiis atque?";
-
   return (
     <>
       <Router>
@@ -25,6 +22,7 @@ const App: React.FC = () => {
           <Route path='/contact' element={<Contact />} />
         </Routes>
       </Router>
+      <Footer />
     </>
   );
 };
