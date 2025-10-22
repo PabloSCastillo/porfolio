@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Preloader from "./components/Preloader/Preloader";
-import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Nav from "./components/Nav/Nav";
 import Marquee from "./components/Marquee/Marquee"; // 👈 importa el componente

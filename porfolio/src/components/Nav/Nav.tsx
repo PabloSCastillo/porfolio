@@ -1,50 +1,179 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
-    const [menuOpen, setMenuOpen] = useState(false);
+  const navItems = [
+    { label: "HOME", path: "/" },
+    { label: "ABOUT", path: "/about" },
+    { label: "CONTACT", path: "/contact" },
+  ];
 
-    const toggleMenu = () => setMenuOpen(!menuOpen);
+  return (
+    <nav className="w-full px-4 py-3 bg-black fixed top-0 left-0 z-50">
+      <div className="flex items-center justify-between">
+        {/* Logo o texto */}
+        <div className="text-white font-hegarty text-4xl tracking-widest">
 
-    const navItems = [
-        { label: "Home", path: "/" },
-        { label: "About", path: "/about" },
-        { label: "Contact", path: "/contact" },
-    ];
-    return (
-        <nav className="w-full  px-4 py-2  bg-white bg-opacity-90 sticky flex shadow backdrop-blur-lg">
-            <div className="container flex flex-wrap items-center justify-between mx-auto ">
-                <div className="mr-4 block py-1.5 text-base text-slate-800 font-semibold">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line>
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </div>
-                <div className=" hidden lg:block">
-                    <ul className="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row md:flex-col  lg:items-center lg:gap-6 ">
-                        {navItems.map((item) => (
-                            <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600 hover:bg-gray-100 rounded"
-                                key={item.path}
-                            >
-                                <Link to={item.path}>{item.label}</Link>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-                <button className="relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
-                    type="button"
-                    onClick={toggleMenu}
+          <ul className="hidden lg:flex items-center gap-10 text-white font-hegarty text-xl">
+            {navItems.map((item) => (
+              <li key={item.path}>
+                <Link
+                  to={item.path}
+                  className="hover:text-gray-400 transition-colors duration-200 font-hegarty"
                 >
-                    {menuOpen ? <menu>dsadsadsa</menu> : <div></div>}
-                    <span className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </span>
-                </button>
-            </div>
-        </nav>
-    );
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Botón menú móvil */}
+        <button
+          className="lg:hidden text-white focus:outline-none z-50"
+          onClick={toggleMenu}
+        >
+          {menuOpen ? (
+            // Icono de cerrar (X)
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-8 h-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          ) : (
+            // Icono hamburguesa
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-8 h-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          )}
+        </button>
+
+        {/* Menú Desktop */}
+        <div className="text-white font-hegarty text-4xl tracking-widest">
+          <svg
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            fill="#ffffff"
+            stroke="#ffffff"
+
+            enable-background="new 0 0 32 32"
+            xmlSpace="preserve"
+
+            width="32"
+            height="32"
+          >
+            <g>
+              <polygon
+                fill="none"
+                stroke="#FFFFFF"
+
+                stroke-width="2"
+                stroke-miterlimit="10"
+
+                points="5,21 11,21 21,11 21,5 5,5"
+              />
+              <polygon
+                fill="none"
+                stroke="#FFFFFF"
+                stroke-width="2"
+                stroke-miterlimit="10"
+                points="11,27 27,27 27,11 21,11 11,21"
+              />
+              <path
+                fill="none"
+                stroke="#FFFFFF"
+                stroke-width="2"
+
+                stroke-linejoin="round"
+
+                stroke-miterlimit="10"
+                d="M8,16c4.3,0,6-2.4,6-6"
+              />
+              <path
+                fill="none"
+                stroke="#FFFFFF"
+                stroke-width="2"
+                stroke-linejoin="round"
+                stroke-miterlimit="10"
+                d="M9,12c0,1.7,2.2,3,5,3"
+              />
+              <line
+                fill="none"
+                stroke="#FFFFFF"
+                stroke-width="2"
+                stroke-miterlimit="10"
+                x1="8" y1="10" x2="16" y2="10"
+              />
+              <line
+                fill="none"
+                stroke="#FFFFFF"
+                stroke-width="2"
+                stroke-miterlimit="10"
+                x1="12" y1="10" x2="12" y2="8"
+              />
+              <polyline
+                fill="none"
+                stroke="#FFFFFF"
+                stroke-width="2"
+                stroke-miterlimit="10"
+                points="22,24 22,23 20,17 20,17 18,23 18,24"
+              />
+              <line
+                fill="none"
+                stroke="#FFFFFF"
+                stroke-width="2"
+                stroke-miterlimit="10"
+                x1="18.4" y1="22" x2="21.6" y2="22"
+              />
+            </g>
+          </svg>
+        </div>
+
+      </div>
+
+      {/* Menú Mobile Fullscreen */}
+      {menuOpen && (
+        <div className="fixed inset-0 bg-black flex flex-col items-center justify-center text-white font-hegarty text-3xl space-y-10 transition-all duration-300">
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className="hover:text-gray-400 transition-colors duration-200 font-hegarty"
+              onClick={() => setMenuOpen(false)}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      )}
+
+    </nav>
+  );
 };
 
 export default Nav;

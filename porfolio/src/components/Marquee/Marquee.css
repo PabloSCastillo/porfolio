@@ -3,12 +3,12 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%); /* mueve la mitad del contenido duplicado */
   }
 }
 
 .animate-marquee {
-  display: inline-block;
-  white-space: nowrap;
+  display: flex;
+  width: max-content;
   animation: marquee linear infinite;
 }
