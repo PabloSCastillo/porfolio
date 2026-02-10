@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-import React from "react";
-=======
 import React, { useState, useEffect } from "react";
 import Preloader from "./components/Preloader/Preloader";
 import Footer from "./components/Footer/Footer";
->>>>>>> 0f3999ae54792036b0a8659e23a91de336d0d85e
 import Nav from "./components/Nav/Nav";
 import Marquee from "./components/Marquee/Marquee"; // 👈 importa el componente
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
@@ -12,9 +8,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 
-<<<<<<< HEAD
-const App: React.FC = () => {
-=======
 const AppContent: React.FC = () => {
   const location = useLocation();
   const [loading, setLoading] = useState(true);
@@ -31,7 +24,6 @@ const AppContent: React.FC = () => {
     return <Preloader />;
   }
 
->>>>>>> 0f3999ae54792036b0a8659e23a91de336d0d85e
   return (
     <>
       <Marquee

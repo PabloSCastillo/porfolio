@@ -24,18 +24,6 @@ const Nav = () => {
                   to={item.path}
                   className="hover:text-gray-400 transition-colors duration-200 font-hegarty"
                 >
-<<<<<<< HEAD
-                    {menuOpen? <menu>dsadsadsa</menu>:<div></div>}
-                    <span className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </span>
-                </button>
-            </div>
-        </nav>
-    );
-=======
                   {item.label}
                 </Link>
               </li>
@@ -184,9 +172,9 @@ const Nav = () => {
         </div>
       )}
 
+
     </nav>
   );
->>>>>>> 0f3999ae54792036b0a8659e23a91de336d0d85e
 };
 
 export default Nav;
