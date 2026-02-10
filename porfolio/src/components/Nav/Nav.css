@@ -1,0 +1,51 @@
+/* Estilos del Navegador - Estilo New York Times */
+
+nav {
+  background-color: #FFFFFF;
+  font-family: 'Georgia', 'Noto Serif', serif;
+}
+
+nav a {
+  color: #000000;
+  font-family: 'Georgia', 'Noto Serif', serif;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000000;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #404040;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Menú móvil */
+.mobile-menu {
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: 'Georgia', 'Noto Serif', serif;
+}
+
+.mobile-menu a {
+  color: #000000;
+  font-size: 1.875rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  color: #404040;
+}

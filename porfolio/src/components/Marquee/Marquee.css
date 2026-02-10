@@ -11,4 +11,16 @@
   display: flex;
   width: max-content;
   animation: marquee linear infinite;
+  font-family: 'Georgia', 'Noto Serif', serif;
+  color: #000000;
+  background-color: #FFFFFF;
+  padding: 15px 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  will-change: transform;
+}
+
+.animate-marquee span {
+  padding-right: 4rem; /* espacio entre copias para entrada natural */
 }

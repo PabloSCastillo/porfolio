@@ -3,6 +3,7 @@ import Preloader from "./components/Preloader/Preloader";
 import Footer from "./components/Footer/Footer";
 import Nav from "./components/Nav/Nav";
 import Marquee from "./components/Marquee/Marquee"; // 👈 importa el componente
+import AudioPlayer from "./components/AudioPlayer/AudioPlayer";
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -26,6 +27,7 @@ const AppContent: React.FC = () => {
 
   return (
     <>
+      <AudioPlayer />
       <Marquee
         text="Building the future, one elegant line at a time."
         speed={25}

@@ -6,11 +6,17 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        bartle: ['"BBH Sans Bartle"', 'sans-serif'],
-        hegarty: ['"BBH Sans Hegarty"', 'sans-serif'],
-        bebas: ['"Bebas Neue"', "cursive"],
+        bartle: ['Georgia', 'Noto Serif', 'serif'],
+        hegarty: ['Georgia', 'Noto Serif', 'serif'],
+        bebas: ['Georgia', 'Noto Serif', 'serif'],
       },
-
+      colors: {
+        'nyt-black': '#000000',
+        'nyt-white': '#FFFFFF',
+        'nyt-red': '#CC0000',
+        'nyt-gray': '#404040',
+        'nyt-light-gray': '#F7F7F7',
+      },
     },
   },
   plugins: [],

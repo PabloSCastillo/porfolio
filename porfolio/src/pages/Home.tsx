@@ -1,6 +1,5 @@
 import React from "react";
 import miFoto from '../assets/photo.jpg';
-import AudioPlayer from "../components/AudioPlayer/AudioPlayer";
 
 const Home: React.FC = () => {
   // ===================================
@@ -21,11 +20,10 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <AudioPlayer></AudioPlayer>
-      <div className="min-h-lvh bg-black text-white">
+      <div className="min-h-lvh bg-white text-black">
 
         {/* Título de la página */}
-        <h1 className="grid grid-cols-1 text-center text-4xl p-6 font-hegarty">HOME</h1>
+        <h1 className="grid grid-cols-1 text-center text-5xl p-6 font-hegarty font-bold border-b-2 border-black" style={{color: '#000000'}}>HOME</h1>
 
         {/* Contenedor de la foto y el texto de presentación */}
         <div className="flex flex-col items-center justify-center p-8">

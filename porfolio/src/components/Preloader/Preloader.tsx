@@ -20,12 +20,12 @@ const Preloader: React.FC = () => {
 
   return (
     <div
-      className={`fixed inset-0 flex items-center justify-center bg-black z-50 ${
+      className={`fixed inset-0 flex items-center justify-center bg-white z-50 ${
         fadeOut ? "preloader-fade-out" : ""
       }`}
     >
       <span
-        className={`text-6xl font-bold text-white font-hegarty  ${
+        className={`text-6xl font-bold text-black font-hegarty  ${
           fadeOut ? "" : "preloader-fade-in"
         }`}
       >

@@ -5,8 +5,9 @@
 /* stylelint-enable at-rule-no-unknown */
 
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Georgia', 'Noto Serif', serif;
   box-sizing: border-box;
+  color: #000000;
 }
 
 h1 {
@@ -17,7 +18,7 @@ h1 {
 
 html,
 body {
-
+  background-color: #FFFFFF;
   height: 100%;
   width: 100%;
   margin: 0;
