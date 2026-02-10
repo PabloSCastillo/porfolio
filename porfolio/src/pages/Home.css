@@ -1,0 +1,15 @@
+/* Estilos para el Contenedor Principal de la Aplicación */
+.app-content {
+    /* Asegura que la transición de opacidad dure 1.5 segundos, haciéndola suave */
+    transition: opacity 1.5s ease-out; 
+}
+
+/* Estado inicial (oculto, antes de que el preloader termine) */
+.app-content-hidden {
+    opacity: 0;
+}
+
+/* Estado final (visible, después de que el preloader desaparece) */
+.app-content-visible {
+    opacity: 1;
+}
